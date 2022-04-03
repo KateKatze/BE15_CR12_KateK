@@ -1,5 +1,6 @@
 <?php
-require_once 'dbconnect.php';
+require_once 'components/db_connect.php';
+
     if ($_GET['id']) {
         $id = $_GET['id'];
         $sql = "SELECT * FROM offers WHERE id = $id";
@@ -25,26 +26,12 @@ require_once 'dbconnect.php';
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PHP Restaurant</title>
+        <title>Offer Details</title>
         <!-- Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <?php require_once 'components/boot.php'?>    
+	    <!-- Bootstrap JS -->
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <style type="text/css">
-            .manageProduct {
-                margin: auto;
-            }
-            .img-thumbnail {
-                width: 70px !important;
-                height: 70px !important;
-            }
-            td {
-                text-align: center;
-                vertical-align: middle;
-            }
-            tr {
-                text-align: center;
-            }
             #map {
             height: 50%;
             width: 50vw;
@@ -56,7 +43,7 @@ require_once 'dbconnect.php';
             padding: 0;
             }
             .card{
-                margin: 0 auto;
+            margin: 0 auto;
             }
         </style>
     </head>
@@ -70,7 +57,7 @@ require_once 'dbconnect.php';
             </div>
             <div class="card-footer"> 
             <p class="card-text">Price: <?php echo $price ?> €</p>
-            <a href="home.php" class="btn btn-success">Home</a>
+            <a href="index.php" class="btn btn-success">Home</a>
             </div>
             </div>
         </div>

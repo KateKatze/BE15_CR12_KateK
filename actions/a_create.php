@@ -1,5 +1,5 @@
 <?php 
-require_once '../dbconnect.php';
+require_once '../components/db_connect.php';
 include("../components/head.php");
 
 if ($_GET) {
@@ -21,7 +21,7 @@ if ($_GET) {
       echo "<div class='card mt-5' style='width: 22rem; margin: 0 auto;'>
       <div class='card-body'>
       <h4>New offer has been successfully created</h4></div>"; 
-      echo "<div class='card-footer'><a href='../home.php'><button class='btn btn-success'>Home</button></a></div></div>";
+      echo "<div class='card-footer'><a href='../index.php'><button class='btn btn-success'>Home</button></a></div></div>";
       } else {
       echo "Error while creating offer info: ". $conn->error;
    }

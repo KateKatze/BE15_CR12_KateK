@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../dbconnect.php';
+require_once '../components/db_connect.php';
 
 $query = "SELECT * FROM offers";
 $result = mysqli_query($conn, $query);

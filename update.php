@@ -1,7 +1,7 @@
 <?php 
+require_once 'components/db_connect.php';
 include("components/head.php");
 include("components/navbar.php");
-include 'dbconnect.php';
 
 if (isset($_GET['id'])) {
    $id = $_GET['id'];

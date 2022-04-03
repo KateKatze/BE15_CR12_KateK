@@ -1,5 +1,5 @@
 <?php
-require_once 'dbconnect.php';
+require_once 'components/db_connect.php';
 include("components/head.php");
 include("components/navbar.php");
 ?>
