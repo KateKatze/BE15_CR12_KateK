@@ -11,7 +11,7 @@
                 <h1>Invalid Request</h1>
             </div>
             <div class="alert alert-warning" role="alert">
-                <p>You've made an invalid request. Please go to the <a href="index.php" class="alert-link">startpage</a> and try again.</p>
+                <p>You've made an invalid request. Please go to the <a href="../index.php" class="alert-link">startpage</a> and try again.</p>
             </div>
         </div>
     </body>

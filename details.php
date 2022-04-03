@@ -14,11 +14,11 @@ require_once 'components/db_connect.php';
             $longitude = $data['longitude'];
             $latitude = $data['latitude'];
         } else {
-            header("location: error.php");
+            header("location: components/error.php");
         }
         mysqli_close($conn);
     } else {
-        header("location: error.php");
+        header("location: components/error.php");
     }
 ?>
 <!DOCTYPE html>
