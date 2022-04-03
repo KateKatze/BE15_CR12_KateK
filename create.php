@@ -2,14 +2,22 @@
 require_once 'components/db_connect.php';
 include("components/head.php");
 include("components/navbar.php");
+
+$tbody = "";
+$result = mysqli_query($conn, "SELECT * FROM offers");
+
+while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+  $tbody .=
+      "<option value='{$row['locname']}'>{$row['price']}</option>";
+}
 ?>
 
 <div class="container">
   <h3 class="text-center mt-5 mb-5">Create an offer</h3>
 <div class="card"> 
 <div class="card-body">
-  <form action="actions/a_create.php" method="get">
-  <input type="hidden" class="form-control" name="id">
+  <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
+  <!-- <input type="hidden" class="form-control" name="id"> -->
       <label for="locname">Name</label>
       <input type="text" class="form-control" name="locname" placeholder="Location name">
       <br>
