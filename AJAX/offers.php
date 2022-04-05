@@ -1,6 +1,6 @@
 <?php
 
-$conn=mysqli_connect('localhost','root','','be15_cr12_mount_everest_katek');
+require_once '../components/db_connect.php';
 
 //query
 $query="SELECT * FROM offers";

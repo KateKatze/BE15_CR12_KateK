@@ -7,8 +7,8 @@ include("../components/head.php");
     <h1>Printed with AJAX</h1>
     <button class="btn btn-success mt-3 mb-3" id="button">Show All</button>
     <div id="printajax"></div>
+    </div>
     <script>
-     
        document.getElementById("button").addEventListener("click", getOffers, false); //create an eventlistener to call getUsers() function when button clicked
 
        function getOffers() {
@@ -39,6 +39,5 @@ include("../components/head.php");
            request.send(); //send request
        }
    </script>
-    </div>
 </body>
 </html>
